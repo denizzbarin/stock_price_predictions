@@ -1,18 +1,10 @@
 # stock_price_predictions
 Prediction of stock prices using sequence to vector learning
 
-* In this project, it is aimed to see if the stock prices can be estimated "slightly more accurate"
-using non trivial models compared to other adhoc counterparts which will be discussed in the scripts.
+* In this update, the close price will be estimated and compared with adhoc methods
 
-* The initial attempts are to estimate open prices of some financial assets with sequence to vector 
-models such as LSTM,GRU by only using daily autoregressive information of prices.
+* In addition to previous values of close prices, other previous values such as open, low prices etc. will be used
 
-* The second step is to incorporate further details of the concerned financial asset such as
-close price, highest/lowest value during the day, volatility etc., to make more sophisticated estimates
-and compare these estimates with adhoc methods.
+* The model structure is provided in the code
 
-* The third step is to melt other finanical data in one large model to see if extra financial 
-information helps improving validations since the behaviors of financial assets are expected to be 
-affected by  political/economic events and similar assets operating in similar industries are 
-expected to show similar behavior. To incorporate this, a dnn model with vector embeddings will be 
-formed and the asset specific information will be passed as the vector embeddings.
+* The ratio of current to latest previous price is provided to the model as input instead of raw value of price
